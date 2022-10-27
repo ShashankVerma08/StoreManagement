@@ -1,6 +1,8 @@
 // add new product
 #include<iostream>
 #include<fstream>
+
+//add function
 void add()
 {
 	item t;
