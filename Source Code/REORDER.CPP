@@ -1,20 +1,19 @@
-
+//reorder function
 void reorder()
 {
 	int i,n,k=0,j=0;
-	item s;
+	item s;//object of item class
 	
-	showad();
+	showad();//function call
 	cout<<"\n\nEnter Product ID of Product To be Reorder : ";
 	cin>>n;
-	fstream f("item.dat",ios::binary|ios::in|ios::out);
+	fstream f("item.dat",ios::binary|ios::in|ios::out);//read and write to file
 	f.read((char *)&s,sizeof(s));
 	while(f)
 	{
 		if(s.compare(n)==1)
 		{
 			f.seekg(k*sizeof(s),ios::beg);
-			//s.order(0,0);
 			f.write((char*)&s,sizeof(s));
 			j++;
 		}
@@ -48,7 +47,6 @@ void reorderall()
 			f.read((char*)&s,sizeof(s));
 			while(f)
 			{
-				//s.order(2,0);
 				f.seekg(k*sizeof(s),ios::beg);
 				f.write((char*)&s,sizeof(s));
 				f.read((char*)&s,sizeof(s));

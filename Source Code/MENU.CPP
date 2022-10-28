@@ -1,6 +1,6 @@
 void menu()
 {
-	back:
+	back://label
 	cout<<"Menu:\n\n1.Admin Login\n2.Customer Menu\n3.Exit\n";
 	int i;
 	i=getch();

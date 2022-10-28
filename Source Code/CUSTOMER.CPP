@@ -1,7 +1,7 @@
 // customer menu
 void customer()
 {
-	top:
+	top://label
 	cout<<"Menu :\n1.Purchase Item\n2.Show All Product\n3.View Bill\n4.Back To Main Menu\n";
 	int i;
 	i=getch();

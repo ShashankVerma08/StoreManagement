@@ -1,5 +1,5 @@
 // inventory main
-#include "C:\Users\shaverma\Desktop\Inventory-Management-System\HEADER.cpp"
+#include "C:\Users\skori\C++ Training\Inventory-Management-System\HEADER.cpp"
 int main()
 {
 	system("cls");
@@ -8,4 +8,4 @@ int main()
 	menu();
 }
 
- 
+  

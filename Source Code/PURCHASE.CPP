@@ -2,21 +2,20 @@
 void pur()
 {
 	int i,n,amt=0,bill=0;
-	item s;
-	Number no;
+	item s;//object of class item
+	Number no;//object of class Number
 	int BillNumber=no.ReadBillNo();
-	again:
+	again://label
 	int j=0,k=0;
-	showu();
+	showu();//function call
 	cout<<"\n\nEnter Product ID of Product You Want To Purchase : ";
 	cin>>n;
-	fstream f("item.dat",ios::binary|ios::in|ios::out);
+	fstream f("item.dat",ios::binary|ios::in|ios::out);//read and write to file
 	f.read((char *)&s,sizeof(s));
 	while(f)
 	{
 		if(s.compare(n)==1)
 		{
-			//s.showad();getch();
 			f.seekg(k*sizeof(s),ios::beg);
 			s.purchase(amt,BillNumber);
 			f.write((char*)&s,sizeof(s));
@@ -33,9 +32,7 @@ void pur()
 	char ch=getch();
 	if(ch=='y'||ch=='Y')
 		goto again;
-	/*if(amt!=0)
-		s.makebill(amt);*/
-	showbill(BillNumber);
+	showbill(BillNumber);//function call
 	no.SetBillNo();
 
 }

@@ -6,7 +6,7 @@ class item
 		float profit;
 		char name[50],unit[10];
 	public:
-		void enter(int z)
+		void enter(int z)//function definition
 		{
 			Number n;
 			if(z==1)
@@ -26,27 +26,27 @@ class item
 			if(z==1)
 				n.SetItemNo();
 		}
-		void pro()
+		void pro()//function definition
 		{
 			profit=((price-cp)*(100/cp));
 			cout<<"\t\tProfit : "<<profit<<" %\n";
 		}
-		void showu()
+		void showu()//function definition
 		{
 			cout<<setw(7)<<id<<setw(17)<<name<<setw(10)<<price<<setw(17)<<stock<<" "<<unit;
 		}
-		void showad()
+		void showad()//function defintion
 		{
 			cout<<setw(4)<<id<<setw(10)<<name<<setw(10)<<cp<<setw(10)<<price<<setw(10)<<profit<<setw(7)<<stock<<" "<<unit<<setw(10)<<min<<setw(13)<<reorder;
 		}
-		int compare(int n)
+		int compare(int n)//function defintion
 		{
 			if(n==id)
 				return 1;
 			else
 				return 2;
 		}
-		void order(int n, int &z)
+		void order(int n, int &z)//function definition
 		{
 			int j;
 			if(n==0)
@@ -69,7 +69,7 @@ class item
 				cout<<"\n"<<name<<" Reordered ";getch();
 			}
 		}
-		void purchase(int &amt, int z)
+		void purchase(int &amt, int z)//function definition
 		{
 			int qty;
 			cout<<"\n Enter Qty. of "<<name<<" you want to purchase : ";
@@ -100,10 +100,10 @@ class item
 				amt=0;
 			}
 		}
-		void makebill(int Qty,int z)
+		void makebill(int Qty,int z)//function definition
 		{
 
-			ofstream f("bill.dat",ios::binary|ios::app);
+			ofstream f("bill.dat",ios::binary|ios::app);//write to file
 			struct B
 			{
 				int billno;

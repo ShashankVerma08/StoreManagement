@@ -1,10 +1,10 @@
 // Delete
 void del()
 {
-	ifstream f("item.dat",ios::binary);
-	ofstream j("temp.dat",ios::binary);
+	ifstream f("item.dat",ios::binary);//read from the file
+	ofstream j("temp.dat",ios::binary);//write to the file
 	int n,i,k=0;
-	item s;
+	item s;//object s of the item class
 	showad();
 	cout<<"\n\nItem Id To be Deleted ";
 	cin>>n;

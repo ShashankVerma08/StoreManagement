@@ -1,5 +1,7 @@
-struct B
+//bill function
+class B
 {
+    public:
 		int billno;
 		char Name[50],Unit[20];
 		int Qty;
@@ -9,7 +11,7 @@ struct B
 int no()
 {
 		B t;int i=0,billno;
-			fstream f("bill.dat",ios::binary|ios::in|ios::out);
+			fstream f("bill.dat",ios::binary|ios::in|ios::out);//both read and write to file
 			cout<<"\n\n "<<sizeof(t);
 			f.seekg((-6),ios::end);
 			f.read((char*)&t,sizeof(t));
@@ -25,7 +27,7 @@ void showbill(int BillNumber)
 	B b;
 	int Final=0;
 	int k=1;
-	ifstream f("bill.dat",ios::binary);
+	ifstream f("bill.dat",ios::binary);//read from the file
 	cout<<"Here 's Your Bill ";
 	cout<<"\n\n*******************************************************************************";
 	cout<<setw(42)<<"\n"<<"CSS Shop\n";
@@ -55,7 +57,7 @@ void bill()
 	cout<<"Enter Bill Number ";
 	int n,k=0;;
 	cin>>n;
-	ifstream f("bill.dat",ios::binary);
+	ifstream f("bill.dat",ios::binary);//read from the file
 	B b;
 	while(f.read((char*)&b,sizeof(b)))
 	{
@@ -65,7 +67,7 @@ void bill()
 		 }
 	}
 	if(k!=0)
-		showbill(n);
+		showbill(n);//call to the function with n as an arguement
 	else
 		cout<<" Bill No. Does Not Exist ";
 	getch();

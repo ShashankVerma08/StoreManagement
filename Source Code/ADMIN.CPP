@@ -2,9 +2,9 @@
 #include<iostream>
 void admin()
 {
-	change();
-	password();
-	top:
+	//change();
+	password();//calling password function
+	top://label
 	cout<<"Menu :\n1.Add New Item\n2.Show All Product\n3.Delete Product\n4.Modify Product\n5.Reorder Product\n6.Reorder All\n7.Change Password\n8.Backup or Retrieve Data\n9.Back To Main Menu\n";
 	int i;
 	i=getch();

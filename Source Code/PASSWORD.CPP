@@ -1,6 +1,6 @@
 // password
-void encrypt(char s[]);
-void decrypt(char s[]);
+void encrypt(char s[]);//function declaration
+void decrypt(char s[]);//function declartion
 void enter(char str[20])
 {
 	char ch;
@@ -21,9 +21,9 @@ void enter(char str[20])
 }
 void change()
 {
-	ofstream r("password.dat",ios::binary);
+	ofstream r("password.dat",ios::binary);//write to the file
 	char s[20],re[20];
-	retry:
+	retry://label
 	cout<<"\nEnter New Password ";
 	enter(s);
 	cout<<"\n\nReConfirm Password ";
@@ -46,13 +46,13 @@ void password()
 {
 	char str[20],pass[20];
 	int i,k=0;
-	back:
+	back://label
 	cout<<"\nEnter Password ";
 	enter(str);
-	ifstream f("password.dat",ios::binary);
+	ifstream f("password.dat",ios::binary);//read from the file
 	f>>pass;
-	decrypt(pass);
-	i=strcmp(pass,str);
+	decrypt(pass);//function call
+	i=strcmp(pass,str);//string compare function
 	if(i==0)
 		cout<<"\n Succesful LOgin !!";
 	else

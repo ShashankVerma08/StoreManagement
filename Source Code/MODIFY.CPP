@@ -3,10 +3,10 @@ void modify()
 {
 	int i,n,k=0,j=0;
 	item s;
-	showad();
+	showad();//function call
 	cout<<"\n\nEnter Product ID of Product To be Modified : ";
 	cin>>n;
-	fstream f("item.dat",ios::binary|ios::in|ios::out);
+	fstream f("item.dat",ios::binary|ios::in|ios::out);//read and write to the file
 	f.read((char *)&s,sizeof(s));
 	while(f)
 	{
