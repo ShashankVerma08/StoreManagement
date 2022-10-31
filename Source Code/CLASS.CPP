@@ -2,7 +2,7 @@
 class item
 {
 	private:
-		int id,price,cp,reorder,min,stock;
+		int id,price,cp,stock;
 		float profit;
 		char name[50],unit[10];
 	public:
@@ -12,16 +12,12 @@ class item
 			if(z==1)
 				id=n.ReadItemNo();
 			cout<<"\n\nEnter Product Details\n\nProduct id : "<<id;
-			cout<<"\n\nEnter Product Name : ";
-			cin>>name;
-			cout<<"\nEnter Unit Of Product : ";
-			cin>>unit;
+			cout<<"\n\nEnter Product Name : ";cin>>name;
+			cout<<"\nEnter Unit Of Product : ";cin>>unit;
 			cout<<"\nEnter Cost Price of Product : ";cin>>cp;
 			cout<<"\nEnter Selling Price of Product : ";cin>>price;
 			pro();
 			cout<<"\nEnter Current Stock ";cin>>stock;
-			cout<<"\nEnter Minimun Stock when to notify Reorder : ";cin>>min;
-			cout<<"\nEnter Amount to be Reordered ";cin>>reorder;
 			cout<<"\n\nNew Product "<<name<<" Added in Stock ";
 			if(z==1)
 				n.SetItemNo();
@@ -37,7 +33,7 @@ class item
 		}
 		void showad()//function defintion
 		{
-			cout<<setw(4)<<id<<setw(10)<<name<<setw(10)<<cp<<setw(10)<<price<<setw(10)<<profit<<setw(7)<<stock<<" "<<unit<<setw(10)<<min<<setw(13)<<reorder;
+			cout<<setw(4)<<id<<setw(10)<<name<<setw(10)<<cp<<setw(10)<<price<<setw(10)<<profit<<setw(7)<<stock<<" "<<unit;
 		}
 		int compare(int n)//function defintion
 		{
@@ -46,10 +42,10 @@ class item
 			else
 				return 2;
 		}
-		void order(int n, int &z)//function definition
+		void order(int n)//function definition
 		{
 			int j;
-			if(n==0)
+			if(n==1)
 				{
 					cout<<"\nEnter Amount of "<<name<<" to be Reodered : ";
 					cin>>j;
@@ -57,17 +53,6 @@ class item
 					cout<<"\n"<<j<<" "<<unit<<" "<<name<<" Reordered . Updated Stock :"<<stock<<" "<<unit;
 					getch();
 				}
-			if(n==1)
-				if(stock<min)
-					{
-						cout<<"\n"<<name<<" need to be Reordered.  Current Stock : "<<stock<<" "<<unit<<" is below Mentioned Min Qty. ";
-						z=1;
-					}
-			if(n==2 & stock<min)
-			{
-				stock+=reorder;
-				cout<<"\n"<<name<<" Reordered ";getch();
-			}
 		}
 		void purchase(int &amt, int z)//function definition
 		{

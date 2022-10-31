@@ -55,7 +55,7 @@ void showbill(int BillNumber)
 void bill()
 {
 	cout<<"Enter Bill Number ";
-	int n,k=0;;
+	int n,k=0;
 	cin>>n;
 	ifstream f("bill.dat",ios::binary);//read from the file
 	B b;

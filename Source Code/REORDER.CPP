@@ -14,6 +14,7 @@ void reorder()
 		if(s.compare(n)==1)
 		{
 			f.seekg(k*sizeof(s),ios::beg);
+			s.order(1);
 			f.write((char*)&s,sizeof(s));
 			j++;
 		}
@@ -22,37 +23,5 @@ void reorder()
 	}
 	if(j==0)
 		cout<<"\n\nProduct ID Does Not Exist ";
-}
-void reorderall()
-{
-	int i,n,k=0,z=0;
-	item s;
-	showad();
-	fstream f("item.dat",ios::binary|ios::in|ios::out);
-	f.read((char *)&s,sizeof(s));
-	while(f)
-	{
-			s.order(1,z);
-			f.read((char*)&s,sizeof(s));
-	}
-	f.close();
-	if(z==1)
-	{
-	cout<<"\n\n Do You Want To Reorder All Listed Item (y/n)";
-	char ch;
-	ch=getch();
-	if(ch=='y'||ch=='Y')
-		{
-			fstream f("item.dat",ios::in|ios::out|ios::binary);
-			f.read((char*)&s,sizeof(s));
-			while(f)
-			{
-				f.seekg(k*sizeof(s),ios::beg);
-				f.write((char*)&s,sizeof(s));
-				f.read((char*)&s,sizeof(s));
-				k++;
-			}
-			f.close();
-		}
-	}
+f.close();
 }

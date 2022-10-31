@@ -10,20 +10,19 @@
 using namespace std;
 
 void menu();
-#include"C:\Users\skori\C++ Training\Inventory-Management-System\PASSWORD.CPP"
-#include"C:\Users\skori\C++ Training\Inventory-Management-System\NUMBER.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\CLASS.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\ADD.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\SHOW.CPP"
-#include"C:\Users\skori\C++ Training\Inventory-Management-System\DELETE.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\MODIFY.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\REORDER.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\BILL.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\PURCHASE.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\BACKUP.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\ADMIN.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\CUSTOMER.CPP"
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\MENU.CPP"
+#include"C:\Users\skori\C++ Training\Store-Management-System\PASSWORD.CPP"
+#include"C:\Users\skori\C++ Training\Store-Management-System\NUMBER.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\CLASS.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\ADD.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\SHOW.CPP"
+#include"C:\Users\skori\C++ Training\Store-Management-System\DELETE.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\MODIFY.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\REORDER.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\BILL.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\PURCHASE.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\ADMIN.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\CUSTOMER.CPP"
+#include "C:\Users\skori\C++ Training\Store-Management-System\MENU.CPP"
 
 
 

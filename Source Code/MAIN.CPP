@@ -1,5 +1,5 @@
 // inventory main
-#include "C:\Users\skori\C++ Training\Inventory-Management-System\HEADER.cpp"
+#include "C:\Users\skori\C++ Training\Store-Management-System\HEADER.cpp"
 int main()
 {
 	system("cls");
